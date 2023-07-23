@@ -12,7 +12,12 @@ const App = () => {
       <Form />
       {/* <Button /> */}
       <AirlineStatus
-        response={{ Delta: "SUCCESS", United: "FAILED", Frontier: "Failed" }}
+        response={{
+          Delta: "SUCCESS",
+          United: "FAILURE",
+          Frontier: "COMING SOON",
+          Southwest: "IN PROGRESS",
+        }}
       />
     </div>
   );
