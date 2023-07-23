@@ -1,6 +1,6 @@
-```python
 from flask import jsonify
 from models.User import User
+
 
 def createUser(data):
     new_user = User(
@@ -20,12 +20,13 @@ def createUser(data):
     new_user.save()
     return new_user
 
+
 def updateAirlineStatus(user):
     # Simulate the process of sending user's information to airlines
     airlines = ["Delta", "United", "American", "Southwest", "JetBlue"]
     status = {}
     for airline in airlines:
         # Simulate the success or failure of the operation
-        status[airline] = "SUCCESS" if user.send_info_to_airline(airline) else "FAILED"
+        status[airline] = "SUCCESS" if user.send_info_to_airline(
+            airline) else "FAILED"
     return jsonify(status)
-```
