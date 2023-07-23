@@ -11,7 +11,9 @@ const App = () => {
       <Header />
       <Form />
       {/* <Button /> */}
-      <AirlineStatus />
+      <AirlineStatus
+        response={{ Delta: "SUCCESS", United: "FAILED", Frontier: "Failed" }}
+      />
     </div>
   );
 };
